@@ -442,7 +442,11 @@ public class GameMaster : MonoBehaviour
 
     public void LoadDialog(DialogConfig dialogConfig, CharacterInGame character = null)
     {
-        dialogCharacter = character;
+        if(character != null)
+        {
+            dialogCharacter = character;
+        }
+        
         loadedDialog = dialogConfig;
 
         var dialogChoices = loadedDialog.GetChoices();
