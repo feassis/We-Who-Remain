@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,7 +12,24 @@ public class GameMaster : MonoBehaviour
 
     public Action<GameStage> StageChanged;
 
+    [Header("Game Settings")]
     [SerializeField] private int turnsToObjective = 100;
+    [SerializeField] private CharacterConfig engineerConfig;
+    [SerializeField] private int initialCrewNumber = 1;
+    [SerializeField] private CharacterInGame characterInGamePrefab;
+    [SerializeField] private CharacterInGame engineerCharacter;
+    [SerializeField] private RectTransform charListHolder;
+    [SerializeField] private int maxNumberOfChoices = 3;
+
+    [Header("Gamestate Graphics")]
+    [SerializeField] private TextMeshProUGUI turnCountDown;
+    [SerializeField] private Button endTurnButtom;
+    [SerializeField] private TextMeshProUGUI dialogText;
+    [SerializeField] private List<Button> choiceButtoms;
+
+    [Header("For Testing Purpose")]
+    [SerializeField] private DialogConfig testingDialog;
+
 
     [Header("Facilities")]
     [SerializeField] private Cryogeincs cryogenics;
@@ -23,7 +41,7 @@ public class GameMaster : MonoBehaviour
     [Header("Cryogenics Graphics")]
     [SerializeField] private TextMeshProUGUI cooldownText;
     [SerializeField] private TextMeshProUGUI crewText;
-    [SerializeField] private FacilityLifeBar cryogenicsLifeBar;
+    [SerializeField] private LifeBar cryogenicsLifeBar;
     [SerializeField] private Button cryogenicsRepairButtom;
     [SerializeField] private TextMeshProUGUI cryogenicsRepairText;
     [SerializeField] private Button cryogenicsUpgradeButtom;
@@ -32,7 +50,7 @@ public class GameMaster : MonoBehaviour
     [Header("Docks Graphics")]
     [SerializeField] private TextMeshProUGUI shipsOnExpeditionText;
     [SerializeField] private TextMeshProUGUI shipsText;
-    [SerializeField] private FacilityLifeBar docksLifeBar;
+    [SerializeField] private LifeBar docksLifeBar;
     [SerializeField] private Button docksRepairButtom;
     [SerializeField] private TextMeshProUGUI docksRepairText;
     [SerializeField] private Button docksUpgradeButtom;
@@ -41,7 +59,7 @@ public class GameMaster : MonoBehaviour
     [Header("Fusion Reactor Graphics")]
     [SerializeField] private TextMeshProUGUI energyDemandText;
     [SerializeField] private TextMeshProUGUI energyGeneratedText;
-    [SerializeField] private FacilityLifeBar reactorLifeBar;
+    [SerializeField] private LifeBar reactorLifeBar;
     [SerializeField] private Button reactorRepairButtom;
     [SerializeField] private TextMeshProUGUI reactorRepairText;
     [SerializeField] private Button reactorUpgradeButtom;
@@ -49,7 +67,7 @@ public class GameMaster : MonoBehaviour
 
     [Header("Greenhouse Graphics")]
     [SerializeField] private TextMeshProUGUI foodGeneratedText;
-    [SerializeField] private FacilityLifeBar greenhouseLifeBar;
+    [SerializeField] private LifeBar greenhouseLifeBar;
     [SerializeField] private Button greenhouseRepairButtom;
     [SerializeField] private TextMeshProUGUI greenhouseRepairText;
     [SerializeField] private Button greenhouseUpgradeButtom;
@@ -60,19 +78,21 @@ public class GameMaster : MonoBehaviour
     [SerializeField] private TextMeshProUGUI foodMaxGeneratedText;
     [SerializeField] private TextMeshProUGUI scrapAmountGeneratedText;
     [SerializeField] private TextMeshProUGUI scrapMaxGeneratedText;
-    [SerializeField] private FacilityLifeBar warehouseLifeBar;
+    [SerializeField] private LifeBar warehouseLifeBar;
     [SerializeField] private Button warehouseRepairButtom;
     [SerializeField] private TextMeshProUGUI warehouseRepairText;
     [SerializeField] private Button warehouseUpgradeButtom;
     [SerializeField] private TextMeshProUGUI warehouseUpgradeText;
 
-    [Header("Gamestate Graphics")]
-    [SerializeField] private TextMeshProUGUI turnCountDown;
-    [SerializeField] private Button endTurnButtom;
+    
 
     public Action<int> TurnAmountChanged;
+    private List<CharacterInGame> charactersInGame = new List<CharacterInGame>();
+    
 
     private GameStage stage = GameStage.Preparetion;
+    private DialogConfig loadedDialog;
+    private CharacterInGame dialogCharacter;
 
     private void Awake()
     {
@@ -95,9 +115,9 @@ public class GameMaster : MonoBehaviour
         SetupReactor();
         SetupGreenhouse();
         SetupWarehouse();
-    }
 
-    
+        InitializeGame();
+    }
 
     private void OnDestroy()
     {
@@ -105,6 +125,50 @@ public class GameMaster : MonoBehaviour
         {
             Instance = null;
         }
+    }
+
+    private void InitializeGame()
+    {
+        for (int i = 0; i < initialCrewNumber; i++)
+        {
+            var crewMember = cryogenics.GenerateCrewMenber();
+            var inGame = Instantiate<CharacterInGame>(characterInGamePrefab, charListHolder);
+            inGame.Setup(crewMember);
+            charactersInGame.Add(inGame);
+        }
+
+        engineerCharacter.Setup(engineerConfig.GetCharacterObject());
+
+        SetupChoiceButtons();
+    }
+
+    private void SetupChoiceButtons()
+    {
+        choiceButtoms[0].onClick.AddListener(OnFirstChoiceButtonClicked);
+        choiceButtoms[1].onClick.AddListener(OnSecondChoiceButtonClicked);
+        choiceButtoms[2].onClick.AddListener(OnThirdChoiceButtonClicked);
+    }
+
+    private void OnThirdChoiceButtonClicked()
+    {
+        LoadChoice(2);
+    }
+
+    private void OnSecondChoiceButtonClicked()
+    {
+        LoadChoice(1);
+    }
+
+    private void OnFirstChoiceButtonClicked()
+    {
+        LoadChoice(0);
+    }
+
+    private void LoadChoice(int index)
+    {
+        var choices = loadedDialog.GetChoices();
+
+        LoadDialog(choices[index]);
     }
 
     private void OnEndTurnButtomClicked()
@@ -121,6 +185,11 @@ public class GameMaster : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.P))
         {
             ProgressToNextStage();
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadDialog(testingDialog);
         }
 #endif
     }
@@ -351,6 +420,67 @@ public class GameMaster : MonoBehaviour
 
     #endregion
 
+    public void TryGoToExpedition(CharacterInGame characterInGame)
+    {
+        //to do
+    }
+
+    public void CancelExpedition(CharacterInGame characterInGame)
+    {
+        //to do
+    }
+
+    public void AddToHealToHeal(CharacterInGame characterInGame)
+    {
+        //to do
+    }
+
+    public void AddGiftToCharacter(CharacterInGame characterInGame)
+    {
+        //to do
+    }
+
+    public void LoadDialog(DialogConfig dialogConfig, CharacterInGame character = null)
+    {
+        dialogCharacter = character;
+        loadedDialog = dialogConfig;
+
+        if(loadedDialog.GetBeginDialogAction() != null)
+        {
+            dialogText.text = String.Format(loadedDialog.GetDialogText(), loadedDialog.GetBeginDialogAction().ExecuteAction());
+        }
+        else
+        {
+            dialogText.text = loadedDialog.GetDialogText();
+        }
+
+        var dialogChoices = loadedDialog.GetChoices();
+
+        if(dialogChoices != null)
+        {
+            for (int i = 0; i < maxNumberOfChoices; i++)
+            {
+                choiceButtoms[i].gameObject.SetActive(i < dialogChoices.Count);
+
+                if(i < dialogChoices.Count)
+                {
+                    choiceButtoms[i].GetComponentInChildren<TextMeshProUGUI>().text = dialogChoices[i].GetPreviewText();
+                }
+            }
+        }
+    }
+
+    public void UnloadDialog()
+    {
+        loadedDialog = null;
+        dialogCharacter = null;
+
+        foreach (Button choiceButton in choiceButtoms)
+        {
+            choiceButton.gameObject.SetActive(false);
+        }
+    }
+
     public int GetTotalEnergyDemand()
     {
         int energyRequired = 0;
@@ -399,6 +529,26 @@ public class GameMaster : MonoBehaviour
     public void GenerateResources()
     {
         warehouse.AddFood(greenhouse.GetFoodProduction());
+    }
+
+    public void GainFood(int amount)
+    {
+        warehouse.AddFood(amount);
+    }
+
+    public void LoseFood(int amount)
+    {
+        warehouse.RemoveFood(amount);
+    }
+
+    public void GainScrap(int amount)
+    {
+        warehouse.AddScrap(amount);
+    }
+
+    public void LoseScrap(int amount)
+    {
+        warehouse.RemoveScrap(amount);
     }
 
     public void ConsumeResources()

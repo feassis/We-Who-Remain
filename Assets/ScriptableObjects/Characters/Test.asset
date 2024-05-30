@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6430160c40770504faa074ef648397b4, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  charName: "Isto \xE9 um Teste"
+  bio: Teu Cu
+  portrait: {fileID: 21300000, guid: 005888ede18a58e4db8d069cfa3007cb, type: 3}
+  hp: 50
+  strength: 1
+  inteligence: 1
+  dexterity: 1
+  IsEngineer: 0

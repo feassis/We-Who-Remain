@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Cryogeincs : Facility
@@ -9,11 +10,16 @@ public class Cryogeincs : Facility
     [SerializeField] private int numberOfDefrosts = 1;
     [SerializeField] private int numberOfDefrostsIncEachTwoLevels = 1;
 
+    [SerializeField] private List<CharacterConfig> characterConfigs = new List<CharacterConfig>();
+
+    private List<Character> charactesToOffer = new List<Character>();
+
     public Action<int> TurnsToDefrostChanged;
 
     private int turnsUntilNextDefrost;
     public int GetTurnsUntilNextDefrost() => turnsUntilNextDefrost;
 
+    private int listIndex = 0;
 
     public int GetTurnsToDefrost() => Mathf.Clamp( turnsToDefrostBase - turnsToDefrostDecPerLevel * level , 0, int.MaxValue);
 
@@ -50,6 +56,20 @@ public class Cryogeincs : Facility
 
         turnsUntilNextDefrost = GetTurnsToDefrost();
 
-        //setup characters
+        var charList = new List<Character>();
+
+        foreach (var config in characterConfigs)
+        {
+            charList.Add(config.GetCharacterObject());
+        }
+
+        charactesToOffer = ListRandomizer.ShuffleList(charList);
+    }
+
+    public Character GenerateCrewMenber()
+    {
+        var character = charactesToOffer[listIndex % charactesToOffer.Count];
+        listIndex++;
+        return character;
     }
 }

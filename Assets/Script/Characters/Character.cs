@@ -13,6 +13,7 @@ public class Character
     public int Dexterity;
 
     public bool IsOnExpedition;
+    public bool IsOnHeal;
     public bool IsEngineer;
 
     public Action Healed;
