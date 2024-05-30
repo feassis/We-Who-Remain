@@ -21,6 +21,8 @@ public class CharacterInGame : MonoBehaviour
     
     private Character character;
 
+    public Character GetCharacter() => character;
+
     private void Awake()
     {
         expeditionButtom.onClick.AddListener(OnExpeditionButtomClicked);

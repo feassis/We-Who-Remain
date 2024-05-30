@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class GameMaster : MonoBehaviour
 {
@@ -189,7 +190,7 @@ public class GameMaster : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.L))
         {
-            LoadDialog(testingDialog);
+            LoadDialog(testingDialog, engineerCharacter);
         }
 #endif
     }
@@ -440,6 +441,8 @@ public class GameMaster : MonoBehaviour
         //to do
     }
 
+
+
     public void LoadDialog(DialogConfig dialogConfig, CharacterInGame character = null)
     {
         if(character != null)
@@ -577,6 +580,19 @@ public class GameMaster : MonoBehaviour
         //consume food for characters
     }
 
+    public int RollSkillCheck(SkillType type)
+    {
+        int skill = type switch 
+        {
+            SkillType.Strength => dialogCharacter.GetCharacter().Strength,
+            SkillType.Intteligence => dialogCharacter.GetCharacter().Inteligence,
+            SkillType.Dexterity => dialogCharacter.GetCharacter().Dexterity,
+        };
+
+
+        return Random.Range(1, 21) + skill;
+    }
+
     public void AdvanceTurns(int amount)
     {
         turnsToObjective -= amount;
@@ -590,4 +606,11 @@ public enum GameStage
     Preparetion = 0,
     Expedition = 1,
     Event = 2,
+}
+
+public enum SkillType
+{
+    Strength = 0,
+    Intteligence = 1,
+    Dexterity = 2,
 }

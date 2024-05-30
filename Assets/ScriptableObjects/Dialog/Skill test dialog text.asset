@@ -10,17 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
-  m_Name: Test Dialog
+  m_Name: Skill test dialog text
   m_EditorClassIdentifier: 
-  previewText: Test Dialog
-  dialogText: 'This is a text with 2 choices
-
-
-    1- Gain Scraps
-
-    2 -Gain Food '
-  BeginDialogAction: {fileID: 0}
+  previewText: Skill TEst STR
+  dialogText: '{0}'
+  BeginDialogAction: {fileID: 11400000, guid: 7dabc142c7c00bf4c91e01355d467dde, type: 2}
   choices:
-  - {fileID: 11400000, guid: 83321d74feb3991468f3bb2cca33cf49, type: 2}
-  - {fileID: 11400000, guid: 581329d19da5c1a4a9df0c0a4d541325, type: 2}
-  - {fileID: 11400000, guid: cda0802e30dd1ad47938345c10145bc0, type: 2}
+  - {fileID: 11400000, guid: 207dc0c808e188a4db60487bb59e2245, type: 2}

@@ -12,6 +12,6 @@ public class LoseFoodDialogAction : DialogAction
 
         GameMaster.Instance.LoseFood(foodToGain);
 
-        return foodToGain.ToString();
+        return "You've lost " + foodToGain.ToString() + " food";
     }
 }

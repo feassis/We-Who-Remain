@@ -8,10 +8,10 @@ public partial class GainScrapDialogAction : DialogAction
 
     public override string ExecuteAction()
     {
-        var foodToGain = Random.Range(minScrap, maxScrap + 1);
+        var scrapToGain = Random.Range(minScrap, maxScrap + 1);
 
-        GameMaster.Instance.GainScrap(foodToGain);
+        GameMaster.Instance.GainScrap(scrapToGain);
 
-        return foodToGain.ToString();
+        return "You've gained " + scrapToGain.ToString() + " scrap";
     }
 }

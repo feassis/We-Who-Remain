@@ -12,6 +12,6 @@ public class GainFoodDialogAction : DialogAction
 
         GameMaster.Instance.GainFood(foodToGain);
 
-        return foodToGain.ToString();
+        return "You've gained " + foodToGain.ToString() + "food";
     }
 }

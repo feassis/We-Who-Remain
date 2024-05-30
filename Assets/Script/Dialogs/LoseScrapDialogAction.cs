@@ -14,7 +14,7 @@ public partial class GainScrapDialogAction
 
             GameMaster.Instance.GainScrap(foodToGain);
 
-            return foodToGain.ToString();
+            return "You've gained " + foodToGain.ToString() + " scrap";
         }
     }
 }
