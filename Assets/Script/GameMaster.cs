@@ -445,15 +445,6 @@ public class GameMaster : MonoBehaviour
         dialogCharacter = character;
         loadedDialog = dialogConfig;
 
-        if(loadedDialog.GetBeginDialogAction() != null)
-        {
-            dialogText.text = String.Format(loadedDialog.GetDialogText(), loadedDialog.GetBeginDialogAction().ExecuteAction());
-        }
-        else
-        {
-            dialogText.text = loadedDialog.GetDialogText();
-        }
-
         var dialogChoices = loadedDialog.GetChoices();
 
         if(dialogChoices != null)
@@ -467,6 +458,15 @@ public class GameMaster : MonoBehaviour
                     choiceButtoms[i].GetComponentInChildren<TextMeshProUGUI>().text = dialogChoices[i].GetPreviewText();
                 }
             }
+        }
+
+        if (loadedDialog.GetBeginDialogAction() != null)
+        {
+            dialogText.text = String.Format(loadedDialog.GetDialogText(), loadedDialog.GetBeginDialogAction().ExecuteAction());
+        }
+        else
+        {
+            dialogText.text = loadedDialog.GetDialogText();
         }
     }
 
@@ -549,6 +549,23 @@ public class GameMaster : MonoBehaviour
     public void LoseScrap(int amount)
     {
         warehouse.RemoveScrap(amount);
+    }
+
+    public void HealDialog(int amount)
+    {
+        dialogCharacter.Heal(amount);
+    }
+    public void DamageDialog(int amount)
+    {
+        dialogCharacter.Damage(amount);
+    }
+    public void FullyHealDialog()
+    {
+        dialogCharacter.FullyHeal();
+    }
+    public void KillDialog()
+    {
+        dialogCharacter.Kill();
     }
 
     public void ConsumeResources()

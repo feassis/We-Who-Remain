@@ -66,6 +66,26 @@ public class CharacterInGame : MonoBehaviour
         giftButtom.gameObject.SetActive(character.IsEngineer);
     }
 
+    public void Heal(int amount)
+    {
+        character.Heal(amount);
+    }
+
+    public void Damage(int amount)
+    {
+        character.Damage(amount);
+    }
+
+    public void Kill()
+    {
+        character.Kill();
+    }
+
+    public void FullyHeal()
+    {
+        character.FullHeal();
+    }
+
     private void UpdateHP()
     {
         currentHPText.text = character.CurrentHP.ToString();

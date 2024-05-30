@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previewText: Gain Scraps
   dialogText: You've gained {0} some scraps
-  BeginDialogAction: {fileID: 0}
+  BeginDialogAction: {fileID: 11400000, guid: 067a08a9a314b1c4e9bf757491f7943b, type: 2}
   choices:
   - {fileID: 11400000, guid: 207dc0c808e188a4db60487bb59e2245, type: 2}

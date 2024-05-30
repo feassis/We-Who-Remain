@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previewText: Gain Food
   dialogText: You've gained {0} some food
-  BeginDialogAction: {fileID: 0}
+  BeginDialogAction: {fileID: 11400000, guid: ef2981e0c9dc05c4ea1dc30df06ee31b, type: 2}
   choices:
   - {fileID: 11400000, guid: 207dc0c808e188a4db60487bb59e2245, type: 2}

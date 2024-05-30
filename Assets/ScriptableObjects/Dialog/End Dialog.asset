@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
   m_Name: End Dialog
   m_EditorClassIdentifier: 
-  previewText: 
+  previewText: End
   dialogText: 
-  BeginDialogAction: {fileID: 0}
+  BeginDialogAction: {fileID: 11400000, guid: bdf77fbe5bac45b448a9e18e35bddc46, type: 2}
   choices: []
