@@ -64,6 +64,11 @@ public class Facility : MonoBehaviour
         MaxLifeChanged?.Invoke(maxLife);
     }
 
+    public void Damage(int amount)
+    {
+        SetLife(Mathf.Clamp(life - amount, 0, maxLife));
+    }
+
     protected virtual void Initialize()
     {
         maxLife = GetMaxLifeForLevel();
@@ -77,7 +82,7 @@ public class Facility : MonoBehaviour
         Repaired?.Invoke();
     }
 
-    public void Upgrade()
+    public virtual void Upgrade()
     {
         level++;
         Upgraded?.Invoke();

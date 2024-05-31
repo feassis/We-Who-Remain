@@ -14,6 +14,7 @@ public class Character
 
     public bool IsOnExpedition;
     public bool IsOnHeal;
+    public bool IsWaitingOnGift;
     public bool IsEngineer;
 
     public Action Healed;

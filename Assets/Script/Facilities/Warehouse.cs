@@ -65,4 +65,13 @@ public class Warehouse : Facility
         currentScrap = Math.Clamp(currentScrap - amount, 0, maxScrap);
         ScrapChanged?.Invoke(currentScrap);
     }
+
+    public override void Upgrade()
+    {
+        level++;
+        maxFood = GetMaxFoodPerLevel();
+        maxScrap = GetMaxScrapPerLevel();
+        Upgraded?.Invoke();
+        AnyFacilityUpgraded?.Invoke();
+    }
 }

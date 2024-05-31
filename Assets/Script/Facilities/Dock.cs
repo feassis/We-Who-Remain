@@ -35,4 +35,19 @@ public class Dock : Facility
     }
 
     public List<Character> GetCharactersOnExpedition() => charactersOnExpedition;
+
+    protected override void Initialize()
+    {
+        base.Initialize();
+
+        numberOfShips = GetShipsAvailablePerLevel();
+    }
+
+    public override void Upgrade()
+    {
+        level++;
+        numberOfShips = GetShipsAvailablePerLevel();
+        Upgraded?.Invoke();
+        AnyFacilityUpgraded?.Invoke();
+    }
 }

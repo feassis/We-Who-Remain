@@ -1401,8 +1401,11 @@ MonoBehaviour:
   intText: {fileID: 5241685068611726561}
   dexText: {fileID: 3358472339397975688}
   expeditionButtom: {fileID: 2579156769194036958}
+  expeditionButtomImage: {fileID: 7318701886822663417}
   healButtom: {fileID: 6897696287305762845}
+  healButtomImage: {fileID: 1865558730242064954}
   giftButtom: {fileID: 8999337616921652801}
+  giftButtomImage: {fileID: 4232908782788535398}
 --- !u!1 &8678004802264425913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,10 +1897,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5644327881420603268, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5644327881420603268, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5644327881420603268, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5644327881420603268, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6617910492292231798, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
       propertyPath: m_Name
       value: ExpeditionMuttom
       objectReference: {fileID: 0}
+    - target: {fileID: 7980118202341687021, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1917,6 +1940,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7318701886822663417 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5644327881420603268, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+  m_PrefabInstance: {fileID: 3154189736711797629}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &6320632247302847934
@@ -2011,11 +2045,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealButtom
       objectReference: {fileID: 0}
+    - target: {fileID: 7980118202341687021, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+--- !u!114 &1865558730242064954 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5644327881420603268, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+  m_PrefabInstance: {fileID: 6320632247302847934}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6897696287305762845 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 580664942197831075, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
@@ -2129,6 +2178,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+--- !u!114 &4232908782788535398 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5644327881420603268, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+  m_PrefabInstance: {fileID: 8424825680878214114}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4719198767244480196 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3861564102271046950, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
