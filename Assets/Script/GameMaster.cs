@@ -35,6 +35,11 @@ public class GameMaster : MonoBehaviour
     [SerializeField] private int maxExpeditionScrapReward = 6;
     [SerializeField] private List<DialogConfig> eventPool = new List<DialogConfig>();
 
+    [Header("Email")]
+    [SerializeField] private MailBox mailBox;
+    [SerializeField] private Button openCloseMailButtom;
+    [SerializeField] private GameObject newEmailGameObject;
+
     [Header("Gamestate Graphics")]
     [SerializeField] private TextMeshProUGUI turnCountDown;
     [SerializeField] private Button endTurnButtom;
@@ -114,7 +119,10 @@ public class GameMaster : MonoBehaviour
     private List<CharacterInGame> chatactersToHeal = new List<CharacterInGame>();
     private List<CharacterInGame> chatactersToGift = new List<CharacterInGame>();
 
+    private List<Mail> mail = new List<Mail>();
+
     private CharacterInGame eventCharacter;
+    private bool isEmailOpen = false;
 
     private void Awake()
     {
@@ -131,6 +139,7 @@ public class GameMaster : MonoBehaviour
     {
         turnCountDown.text = turnsToObjective.ToString();
         endTurnButtom.onClick.AddListener(OnEndTurnButtomClicked);
+        openCloseMailButtom.onClick.AddListener(OnOpenCloseEmailClicked);
 
         SetupCryogenics();
         SetupDocks();
@@ -139,6 +148,23 @@ public class GameMaster : MonoBehaviour
         SetupWarehouse();
 
         InitializeGame();
+    }
+
+    private void OnOpenCloseEmailClicked()
+    {
+        if(stage != GameStage.Preparetion)
+        {
+            return;
+        }
+
+        if(isEmailOpen)
+        {
+            CloseEmail();
+        }
+        else
+        {
+            OpenEmails();
+        }
     }
 
     private void OnDestroy()
@@ -590,9 +616,27 @@ public class GameMaster : MonoBehaviour
         facility.Repair();
     }
 
+    public void OpenEmails()
+    {
+        UnloadDialog();
+
+        mailBox.LoadMails(mail);
+        isEmailOpen = true;
+    }
+
+    public void CloseEmail()
+    {
+        mailBox.UnloadMails();
+        VerifyIfHasUnreadEmail();
+        isEmailOpen = false;
+    }
+
+
     public void LoadDialog(DialogConfig dialogConfig, CharacterInGame character = null)
     {
-        if(character != null)
+        CloseEmail();
+
+        if (character != null)
         {
             dialogCharacter = character;
         }
@@ -691,6 +735,20 @@ public class GameMaster : MonoBehaviour
         }
     }
 
+    public void AdvanceTurns(int amount)
+    {
+        turnsToObjective -= amount;
+        TurnAmountChanged?.Invoke(turnsToObjective);
+        turnCountDown.text = turnsToObjective.ToString();
+
+        foreach (var character in charactersInGame)
+        {
+            character.ProgressTurn();
+        }
+
+        engineerCharacter.ProgressTurn();
+    }
+
     private void ProcessEnergy()
     {
         if(GetTotalEnergyDemand() > reactor.GetGeneratedEnergy())
@@ -731,8 +789,13 @@ public class GameMaster : MonoBehaviour
 
         eventCharacter = ListUtils.GetRandomMember<CharacterInGame>(chatactersToGoOnExpedition);
 
-        foreach (var character in charOnExpedition)
+        foreach (CharacterInGame character in charOnExpedition)
         {
+            if (!character.CanGoToExpedition())
+            {
+                continue;
+            }
+
             float randNumber = Random.Range(0f, 1f);
 
             if(randNumber <= expeditionFailChance)
@@ -746,13 +809,19 @@ public class GameMaster : MonoBehaviour
                 GainScrap(scrapFound);
             }
 
+            character.WentOnExpedition();
             CancelOrFinishExpedition(character);
         }
 
         dialogText.text = expeditionReport;
     }
 
+    public void MarkEmailAsRead(Mail email)
+    {
+        var mail = this.mail.Find(m => m == email);
 
+        mail.wasRead = true;
+    }
 
     private void ProcessGifts()
     {
@@ -871,11 +940,24 @@ public class GameMaster : MonoBehaviour
         return Random.Range(1, 21) + skill;
     }
 
-    public void AdvanceTurns(int amount)
+    public void AddMail(DialogConfig dialogConfig, CharacterInGame characterInGame)
     {
-        turnsToObjective -= amount;
-        TurnAmountChanged?.Invoke(turnsToObjective);
-        turnCountDown.text = turnsToObjective.ToString();
+        mail.Add(new Mail(dialogConfig,characterInGame));
+        VerifyIfHasUnreadEmail();
+    }
+
+    public void VerifyIfHasUnreadEmail()
+    {
+        foreach (Mail email in mail)
+        {
+            if (!email.wasRead)
+            {
+                newEmailGameObject.SetActive(true);
+                return;
+            }
+        }
+
+        newEmailGameObject.SetActive(false);
     }
 }
 

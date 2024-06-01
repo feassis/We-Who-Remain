@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
+using System;
 
 [CreateAssetMenu(fileName = "New Character Config", menuName = "Configs/Character")]
 public class CharacterConfig : ScriptableObject
@@ -16,5 +17,16 @@ public class CharacterConfig : ScriptableObject
     [SerializeField] private int dexterity;
     [SerializeField] private bool IsEngineer;
 
-    public Character GetCharacterObject() => new Character(charName, bio, portrait, hp, strength, inteligence, dexterity, IsEngineer);
+    [SerializeField] private List<CharacterDialogSetup> progressionMailChain;
+    [SerializeField] private List<CharacterDialogSetup> giftMailChain;
+    [SerializeField] private List<CharacterDialogSetup> expeditionMainChain;
+
+    public Character GetCharacterObject() => new Character(charName, bio, portrait, hp, strength, inteligence, dexterity, IsEngineer, progressionMailChain, expeditionMainChain, giftMailChain);
+}
+
+[Serializable]
+public class CharacterDialogSetup
+{
+    public int TriggerTrashold;
+    public DialogConfig Dialog;
 }

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previewText: End
   dialogText: 
-  BeginDialogAction: {fileID: 11400000, guid: bdf77fbe5bac45b448a9e18e35bddc46, type: 2}
+  BeginDialogAction: {fileID: 11400000, guid: ae8d8e77b70ec074a9efad0baa95c0f0, type: 2}
   choices: []

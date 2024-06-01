@@ -23,8 +23,16 @@ public class CharacterInGame : MonoBehaviour
 
 
     private Character character;
+    private int giftsRecived = 0;
+    private int expeditionsWent = 0;
+    private int progressionCounter = 0;
+
+    private bool blockedForExpedition = true;
 
     public Character GetCharacter() => character;
+
+    public bool CanGoToExpedition() => blockedForExpedition;
+    public void ResetCanGoToExpedition() => blockedForExpedition = true;
 
     private void Awake()
     {
@@ -59,6 +67,11 @@ public class CharacterInGame : MonoBehaviour
 
     private void OnExpeditionButtomClicked()
     {
+        if(!CanGoToExpedition())
+        {
+            return;
+        }
+
         if (!character.IsOnExpedition)
         {
             GameMaster.Instance.TryGoToExpedition(this);
@@ -125,7 +138,22 @@ public class CharacterInGame : MonoBehaviour
         intText.text = character.Inteligence.ToString();
         dexText.text = character.Dexterity.ToString();
 
-        giftButtom.gameObject.SetActive(character.IsEngineer);
+        if (character.IsEngineer)
+        {
+            giftButtom.gameObject.SetActive(character.IsEngineer);
+            Facility.AnyFacilityReapired += Facility_OnFacilityAnyRepaired;
+            Facility.AnyFacilityUpgraded += Facility_OnFacilityAnyUpgraded;
+        }
+    }
+
+    private void Facility_OnFacilityAnyUpgraded()
+    {
+        blockedForExpedition = false;
+    }
+
+    private void Facility_OnFacilityAnyRepaired()
+    {
+        blockedForExpedition = false;
     }
 
     public void Heal(int amount)
@@ -150,7 +178,57 @@ public class CharacterInGame : MonoBehaviour
 
     public void Gift()
     {
-        //to do
+        giftsRecived++;
+
+        if (character.GetGiftMailChain() == null || character.GetGiftMailChain().Count == 0)
+        {
+            return;
+        }
+
+        foreach (var mailNode in character.GetGiftMailChain())
+        {
+            if (giftsRecived == mailNode.TriggerTrashold)
+            {
+                GameMaster.Instance.AddMail(mailNode.Dialog, this);
+            }
+        }
+    }
+
+    public void ProgressTurn()
+    {
+        progressionCounter++;
+        ResetCanGoToExpedition();
+
+        if(character.GetProgressionMailChain() == null || character.GetProgressionMailChain().Count == 0)
+        {
+            return;
+        }
+
+        foreach (var mailNode in character.GetProgressionMailChain())
+        {
+            if(progressionCounter == mailNode.TriggerTrashold)
+            {
+                GameMaster.Instance.AddMail(mailNode.Dialog, this);
+            }
+        }
+    }
+
+    public void WentOnExpedition()
+    {
+        expeditionsWent++;
+
+        if (character.GetExpeditionMailChain() == null || character.GetExpeditionMailChain().Count == 0)
+        {
+            return;
+        }
+
+        foreach (var mailNode in character.GetExpeditionMailChain())
+        {
+            if (expeditionsWent == mailNode.TriggerTrashold)
+            {
+                GameMaster.Instance.AddMail(mailNode.Dialog, this);
+            }
+        }
     }
 
     private void UpdateHP()

@@ -20,3 +20,12 @@ MonoBehaviour:
   inteligence: 5
   dexterity: 5
   IsEngineer: 1
+  progressionMailChain:
+  - TriggerTrashold: 1
+    Dialog: {fileID: 11400000, guid: 61ef04761db8fee43b1e0412730fc07e, type: 2}
+  giftMailChain:
+  - TriggerTrashold: 1
+    Dialog: {fileID: 11400000, guid: 581329d19da5c1a4a9df0c0a4d541325, type: 2}
+  expeditionMainChain:
+  - TriggerTrashold: 1
+    Dialog: {fileID: 11400000, guid: 83321d74feb3991468f3bb2cca33cf49, type: 2}

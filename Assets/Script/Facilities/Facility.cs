@@ -23,6 +23,7 @@ public class Facility : MonoBehaviour
     public Action Upgraded;
     public static Action AnyFacilityUpgraded;
     public Action Repaired;
+    public static Action AnyFacilityReapired;
 
     protected int level = 0;
     protected int maxLife;
@@ -80,6 +81,7 @@ public class Facility : MonoBehaviour
     {
         life = maxLife;
         Repaired?.Invoke();
+        AnyFacilityReapired?.Invoke();
     }
 
     public virtual void Upgrade()

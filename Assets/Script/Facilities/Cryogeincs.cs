@@ -37,6 +37,11 @@ public class Cryogeincs : Facility
 
     private void GameMaster_OnTurnAmountChanged(int turns)
     {
+        if(life <= 0)
+        {
+            return;
+        }
+
         turnsUntilNextDefrost--;
 
 

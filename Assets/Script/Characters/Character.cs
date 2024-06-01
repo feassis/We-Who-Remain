@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Character
@@ -20,7 +21,11 @@ public class Character
     public Action Healed;
     public Action Damaged;
 
-    public Character(string name, string bio, Sprite portrait, int maxHP, int strength, int inteligence, int dexterity, bool isEngineer)
+    private List<CharacterDialogSetup> progressionMailChain;
+    private List<CharacterDialogSetup> giftMailChain;
+    private List<CharacterDialogSetup> expeditionMainChain;
+
+    public Character(string name, string bio, Sprite portrait, int maxHP, int strength, int inteligence, int dexterity, bool isEngineer, List<CharacterDialogSetup> progressionChain, List<CharacterDialogSetup> expeditionChain, List<CharacterDialogSetup> giftChain)
     {
         Name = name;
         Bio = bio;
@@ -31,6 +36,9 @@ public class Character
         Inteligence = inteligence;
         Dexterity = dexterity;
         IsEngineer = isEngineer;
+        progressionMailChain = progressionChain;
+        giftMailChain = giftChain;
+        expeditionMainChain = expeditionChain;
     }
 
     public void Heal(int amount)
@@ -56,4 +64,8 @@ public class Character
         CurrentHP = 0;
         Damaged?.Invoke();
     }
+
+    public List<CharacterDialogSetup> GetProgressionMailChain() => progressionMailChain;
+    public List<CharacterDialogSetup> GetGiftMailChain() => giftMailChain;
+    public List<CharacterDialogSetup> GetExpeditionMailChain() => expeditionMainChain;
 }
