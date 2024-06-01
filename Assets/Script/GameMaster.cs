@@ -185,9 +185,29 @@ public class GameMaster : MonoBehaviour
             charactersInGame.Add(inGame);
         }
 
-        engineerCharacter.Setup(engineerConfig.GetCharacterObject());
+        engineerCharacter?.Setup(engineerConfig.GetCharacterObject());
+        Facility.AnyFacilityDestroyed += Facility_OnAnyFacilityDestroyed;
 
         SetupChoiceButtons();
+    }
+
+    private void Facility_OnAnyFacilityDestroyed()
+    {
+        ChackIfLost();
+    }
+
+    private void ChackIfLost()
+    {
+        if(cryogenics.GetLife() == 0 && dock.GetLife() == 0 && greenhouse.GetLife() == 0 
+            && reactor.GetLife() == 0 && warehouse.GetLife() == 0)
+        {
+            EndGame(EndGameMode.Lost);
+        }
+    }
+
+    private void EndGame(EndGameMode lost)
+    {
+        //ToDo Open End Game Scene
     }
 
     private void SetupChoiceButtons()
@@ -240,6 +260,16 @@ public class GameMaster : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L))
         {
             LoadDialog(testingDialog, engineerCharacter);
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            engineerCharacter.Damage(1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            charactersInGame[0].Damage(1);
         }
 #endif
     }
@@ -746,7 +776,7 @@ public class GameMaster : MonoBehaviour
             character.ProgressTurn();
         }
 
-        engineerCharacter.ProgressTurn();
+        engineerCharacter?.ProgressTurn();
     }
 
     private void ProcessEnergy()
@@ -916,6 +946,11 @@ public class GameMaster : MonoBehaviour
             }
         }
 
+        if(engineerCharacter == null)
+        {
+            return;
+        }
+
         if (warehouse.GetCurrentFood() < passiveFoodCost && !engineerCharacter.GetCharacter().IsOnExpedition)
         {
             engineerCharacter.Damage(damageForLackOFood);
@@ -959,6 +994,20 @@ public class GameMaster : MonoBehaviour
 
         newEmailGameObject.SetActive(false);
     }
+
+    internal void KillCharacter(CharacterInGame characterInGame)
+    {
+        if(characterInGame.GetCharacter().IsEngineer) 
+        {
+            engineerCharacter = null;
+        }
+        else
+        {
+            charactersInGame.Remove(characterInGame);
+        }
+
+        Destroy(characterInGame.gameObject);
+    }
 }
 
 public enum GameStage
@@ -973,4 +1022,12 @@ public enum SkillType
     Strength = 0,
     Intteligence = 1,
     Dexterity = 2,
+}
+
+
+public enum EndGameMode
+{
+    Lost = 0,
+    WithOutEngineer = 1,
+    Won = 3,
 }

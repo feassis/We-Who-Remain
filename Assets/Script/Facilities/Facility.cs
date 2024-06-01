@@ -24,6 +24,7 @@ public class Facility : MonoBehaviour
     public static Action AnyFacilityUpgraded;
     public Action Repaired;
     public static Action AnyFacilityReapired;
+    public static Action AnyFacilityDestroyed; 
 
     protected int level = 0;
     protected int maxLife;
@@ -68,6 +69,10 @@ public class Facility : MonoBehaviour
     public void Damage(int amount)
     {
         SetLife(Mathf.Clamp(life - amount, 0, maxLife));
+        if(life <= 0)
+        {
+            AnyFacilityDestroyed?.Invoke();
+        }
     }
 
     protected virtual void Initialize()

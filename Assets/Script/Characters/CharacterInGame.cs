@@ -164,6 +164,11 @@ public class CharacterInGame : MonoBehaviour
     public void Damage(int amount)
     {
         character.Damage(amount);
+
+        if (character.CurrentHP <= 0)
+        {
+            GameMaster.Instance.KillCharacter(this);
+        }
     }
 
     public void Kill()
