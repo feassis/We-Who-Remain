@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Gift 5
+  m_EditorClassIdentifier: 
+  previewText: Trust
+  dialogText: "Commander, I\u2019m honestly at a loss for words. \nYour kindness
+    and support have meant more to me than \nyou can imagine. This journey, despite
+    all its hardships \nhas been incredibly special because of you.\r\n\r\nWhen I
+    first started, I was so insecure about my actions\nalways second-guessing myself.
+    \nBut now, because of your belief in me, I feel at ease \nand confident in what
+    I do. Working with you has been an honor\nand I want you to know that I will
+    stand by your side to the end \nno matter what the outcome. Together, we will
+    see this through.\r\n\r\nThank you, Commander, for everything.\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices: []

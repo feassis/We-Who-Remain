@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Gift 1
+  m_EditorClassIdentifier: 
+  previewText: Commander?
+  dialogText: "Commander, I\u2019m sorry to bother but you might have made\na mistake
+    in the allocated resources. It says here it's for\u2026 me?!\r\nI mean I can\u2019t!
+    I mean you shouldn\u2019t have! I mean-\r\nThank you so much!\r\n\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices: []

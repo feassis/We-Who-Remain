@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Prog 60 Beepo
+  m_EditorClassIdentifier: 
+  previewText: Beepo
+  dialogText: "I am very sorry commander\nBeepo is busy with the very important task
+    of being \nadorable in his holographic wheel. \nFor that, he will not be able
+    to leave my quarters to be\nadorable in the command bridge for the task of stress
+    relief.\r\n\r"
+  BeginDialogAction: {fileID: 0}
+  choices: []

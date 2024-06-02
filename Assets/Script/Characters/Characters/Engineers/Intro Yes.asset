@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Intro Yes
+  m_EditorClassIdentifier: 
+  previewText: Yes
+  dialogText: "Oh gosh! It's so good to hear! I was about to\u2014I mean\u2014\r\n\r\nHello
+    Commander! My name is Pyra Tellos and I\u2019m the Remnant\nchief engineer!\r\nI\u2019m
+    going to try to assist you in our journey the best I can!\r\nAny info you may
+    need I\u2019ll try to check the database! \nThe Remnant is equipped with state-of-the-art
+    software\ndesigned to be as fast and responsive as possible! \nThe new generation
+    of microchips are unbelievably fast! \nUsing nano\u2014Oh sorry! \nI was rambling!
+    I think I should go over the ship\u2019s facilities!\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices:
+  - {fileID: 11400000, guid: 4022ba7cc50812946914e056f1d0bd78, type: 2}

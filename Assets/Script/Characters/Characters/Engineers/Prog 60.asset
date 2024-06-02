@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Prog 60
+  m_EditorClassIdentifier: 
+  previewText: More than halfway there!
+  dialogText: "More than halfway there! I can\u2019t deny I\u2019m starting to feel
+    \nkinda happy being part of this! I never thought much of \nmy creations but
+    seeing my reactor model moving \nhumanity forward, I\u2019m as proud as when
+    I created Beepo!\r\n\nAh! Sorry again! This is a report, not a journal!\r\n\nKeep
+    it up Commander!\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices:
+  - {fileID: 11400000, guid: 92ae96d128d79ab4da50f27585c0d0c0, type: 2}
+  - {fileID: 11400000, guid: b3c5cbe1d7e501c4ab0060821fa01f61, type: 2}

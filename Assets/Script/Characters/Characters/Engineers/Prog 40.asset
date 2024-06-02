@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Prog 40
+  m_EditorClassIdentifier: 
+  previewText: Progress Report!
+  dialogText: "It\u2019s time for the timely progress report! \r\nAccording to the
+    data of our popsicle researchers\n we are 40% of the way to the nearest possibly
+    habitable\nearth-like planet! Isn't near light speed travel wonderful?\nWho would
+    have thought that the only thing humanity\nneeded to make strides in space travel
+    technology was\nthe moon opening its eye\u2026 \nAnd half of the planet being
+    silver shone. \nSorry, I didn\u2019t mean to bring back those heinous memories!\r\nFor
+    now let\u2019s focus on the mission! If you ever feel stressed\nyou can play
+    with Beepo too!\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices:
+  - {fileID: 11400000, guid: 89cafa2c7e47d6a45a9cab7411c497ef, type: 2}
+  - {fileID: 11400000, guid: dbf2ac0047a5efa448d4b9ed0f69dbe8, type: 2}

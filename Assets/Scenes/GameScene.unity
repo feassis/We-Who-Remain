@@ -3468,7 +3468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnsToObjective: 100
-  engineerConfig: {fileID: 11400000, guid: 42b679967edd863439600b7df285c2c5, type: 2}
+  engineerConfig: {fileID: 11400000, guid: 67fa2da270906c147a7ebb09c92e2a32, type: 2}
   initialCrewNumber: 1
   characterInGamePrefab: {fileID: 2703504103407702819, guid: 26064292cbbf1e34badac96966e017de, type: 3}
   engineerCharacter: {fileID: 909640836446745710}

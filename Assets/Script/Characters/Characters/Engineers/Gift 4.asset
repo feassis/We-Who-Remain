@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Gift 4
+  m_EditorClassIdentifier: 
+  previewText: You're so nice!
+  dialogText: "Commander? Is everything alright? \nI don\u2019t think I deserve all
+    this\u2026\r\nDon't get me wrong, me and Beepo are very grateful for this\nbut
+    you really think I\u2019m worth all this trouble?\r\nI- I never thought too highly
+    of myself so\u2026\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices:
+  - {fileID: 11400000, guid: 45838e7d5111c8246a061a15342aa78a, type: 2}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Prog 40 Chances
+  m_EditorClassIdentifier: 
+  previewText: Chances
+  dialogText: "You mean for the planet to be habitable?\r\nI\u2019m not sure? I\u2019m
+    so sorry, I was never briefed on that.\r\nI\u2019m not a specialist in cosmology\u2026
+    BUT\r\nI did inspect that magnificent piece of tech that is our \ninbuilt telescope!
+    Using deployable mirrors, we can \nsimulate lenses several times the size\u2014\nI
+    am getting ahead of myself again! Sorry\u2026\r\n\r\n...\r\n\r\n40%.\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices: []

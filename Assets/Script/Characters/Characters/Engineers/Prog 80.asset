@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Prog 80
+  m_EditorClassIdentifier: 
+  previewText: " I\u2019ve been thinking "
+  dialogText: "I\u2019ve been thinking.\n\r\nI truly felt powerless back home. When
+    the disaster happened\nI saw a lot of bad stuff happening. How could I not, really\nit
+    was all over the place. My dad was working on this very\nreactor model when he
+    was struck with the silver eyes\nsyndrome, and that truly made me lose hope.\nAt
+    least he was put down before turning lunatic.\r\nA year later, I was assigned
+    to continue his project \nbeing told it was for the greater good of humanity,
+    bu\nit just felt like a cruel joke, you know?\r\nBut now, working with you, I
+    can see why this was so \nimportant for my dad, and everyone else too!\n\nLet\u2019s
+    give our all for humanity\u2019s last stand!\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices:
+  - {fileID: 11400000, guid: b052c9b9f576af247a607c1b722b442b, type: 2}
+  - {fileID: 11400000, guid: e3064664183ee964aaca987353cd11fe, type: 2}

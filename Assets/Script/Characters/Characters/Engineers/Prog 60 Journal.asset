@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Prog 60 Journal
+  m_EditorClassIdentifier: 
+  previewText: Journal
+  dialogText: "No! I will not be using this communication channel as my\npersonal
+    journal!\r\nBecause I do have an actual personal journal\nwhich its contents
+    are tied to the security mainframe\nwhich may trigger critical mass in my reactor
+    if there is \na security breach!\r\n\nSorry! I didn\u2019t mean to worry you!
+    IT\u2019S VERY SAFE!"
+  BeginDialogAction: {fileID: 0}
+  choices: []
