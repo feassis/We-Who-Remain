@@ -29,6 +29,8 @@ public class GameMaster : MonoBehaviour
     [SerializeField] private int giftFoodCost = 3;
     [SerializeField] private int damageForLackOFood = 1;
     [SerializeField] private int damageForLackOfEnergy = 1;
+
+
     [Header("Expeditions And Events")]
     [SerializeField][Range(0f, 1f)] private float expeditionFailChance = 0.25f;
     [SerializeField] private int minExpeditionScrapReward = 1;
@@ -768,6 +770,22 @@ public class GameMaster : MonoBehaviour
     public void AdvanceTurns(int amount)
     {
         turnsToObjective -= amount;
+
+        if(turnsToObjective <= 0)
+        {
+            if(engineerCharacter == null)
+            {
+                EndGameScene.OpenEndGameScene(EndGameMode.WithOutEngineer);
+            }
+            else
+            {
+                EndGameScene.OpenEndGameScene(EndGameMode.Won);
+            }
+
+            return;
+        }
+
+
         TurnAmountChanged?.Invoke(turnsToObjective);
         turnCountDown.text = turnsToObjective.ToString();
 

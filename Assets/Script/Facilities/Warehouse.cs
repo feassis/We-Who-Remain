@@ -10,6 +10,11 @@ public class Warehouse : Facility
     [SerializeField] protected int maxFoodBase = 12;
     [SerializeField] protected int maxFoodIncPerLevel = 2;
 
+
+    [SerializeField] private RectTransform whereToAddFood;
+    [SerializeField] private RectTransform whereToAddScrap;
+    [SerializeField] private ResourceChange resourceChangePrefab;
+
     public Action<int> FoodChanged;
     public Action<int> ScrapChanged;
 
@@ -42,28 +47,46 @@ public class Warehouse : Facility
 
     public int GetMaxScrap() => maxScrap;
 
+    private void InstantiateResourceChange(int amount, bool isFood)
+    {
+        if(isFood)
+        {
+            var resourceChange = Instantiate<ResourceChange>(resourceChangePrefab, whereToAddFood);
+            resourceChange.Setup(amount);
+        }
+        else
+        {
+            var resourceChange = Instantiate<ResourceChange>(resourceChangePrefab, whereToAddScrap);
+            resourceChange.Setup(amount);
+        }
+    }
+
     public void AddFood(int amount)
     {
         currentFood = Math.Clamp(currentFood + amount, 0, maxFood);
         FoodChanged?.Invoke(currentFood);
+        InstantiateResourceChange(amount, true);
     }
 
     public void AddScrap(int amount) 
     {  
         currentScrap = Math.Clamp(currentScrap + amount, 0, maxScrap);
         ScrapChanged?.Invoke(currentScrap);
+        InstantiateResourceChange(amount, false);
     }
 
     public void RemoveFood(int amount) 
     {
         currentFood = Math.Clamp(currentFood - amount, 0, maxFood);
         FoodChanged?.Invoke(currentFood);
+        InstantiateResourceChange(-amount, true);
     }
 
     public void RemoveScrap(int amount)
     {
         currentScrap = Math.Clamp(currentScrap - amount, 0, maxScrap);
         ScrapChanged?.Invoke(currentScrap);
+        InstantiateResourceChange(-amount, false);
     }
 
     public override void Upgrade()
