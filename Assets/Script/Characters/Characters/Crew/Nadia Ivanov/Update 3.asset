@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Update 3
+  m_EditorClassIdentifier: 
+  previewText: 'Progress Update 3 '
+  dialogText: "Hello Commander,\r\n\r\nAs I reflect on my journey aboard the Remnant,
+    I can't help \nbut think back to the day of the disaster\u2014the day the world
+    \nwas forever changed by the silver eyes. It's a memory \netched into the fabric
+    of my being, a reminder of the fragility \nof life and the resilience of the
+    human spirit.\r\n\r\nI've heard stories from eyewitnesses who claim to have seen
+    \nthe moon opening its eye, as if awakening from a long slumber. \nSome have
+    even speculated that the moon itself is a \nmacro life form, a sentient being
+    lurking in the depths of space.\r\n\r\nOf course, such notions are nothing more
+    than fanciful \nspeculation, the product of overactive imaginations and \nthe
+    fear of the unknown. As a scientist, I'm committed to \nseeking the truth, no
+    matter how improbable it may seem.\r\n\r\nThank you for allowing me to share
+    my thoughts with you. \nTogether, we will continue to unravel the mysteries of
+    the \ncosmos and forge a path toward humanity's future.\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices: []

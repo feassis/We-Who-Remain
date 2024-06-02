@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Update 3
+  m_EditorClassIdentifier: 
+  previewText: 'Progress Update 3 '
+  dialogText: "As I continue to expand my knowledge and expertise, \nI can't help
+    but think back to the day of tragedy\u2014the day\n the silver eyes swept across
+    the world, leaving devastation \nin their wake. I was a young doctor then, overwhelmed
+    by \nthe sheer magnitude of the crisis. Despite my best efforts,\nI felt powerless
+    to help those afflicted by the mysterious illness.\r\n\nThank you for believing
+    in me and for giving me the chance \nto contribute to this important mission.
+    Together, I know we \ncan overcome any obstacle that stands in our way.\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices: []

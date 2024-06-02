@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6430160c40770504faa074ef648397b4, type: 3}
+  m_Name: Nadia Ivanov
+  m_EditorClassIdentifier: 
+  charName: ' Nadia Ivanov'
+  bio: 'Scientist '
+  portrait: {fileID: 0}
+  hp: 100
+  strength: 1
+  inteligence: 3
+  dexterity: 2
+  IsEngineer: 0
+  progressionMailChain: []
+  giftMailChain: []
+  expeditionMainChain:
+  - TriggerTrashold: 10
+    Dialog: {fileID: 11400000, guid: cef6af6ba3a7b5e46a26bff52035b0bd, type: 2}
+  - TriggerTrashold: 20
+    Dialog: {fileID: 11400000, guid: d3c394e4ac065ba43b591ba7666cfece, type: 2}
+  - TriggerTrashold: 30
+    Dialog: {fileID: 11400000, guid: 2743dfb23253f3a43b2c71fea956ef1d, type: 2}

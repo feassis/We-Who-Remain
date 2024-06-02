@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Update 3
+  m_EditorClassIdentifier: 
+  previewText: Progress Update 3
+  dialogText: "I've been doing some reflecting, and I wanted to share a little \npiece
+    of my story with you. It all goes back to the day of the \ndisaster\u2014the
+    day everything changed.\r\n\r\nI was flying an experimental jet for the military
+    when it \nhappened. One moment, I was soaring through the skies, \nfeeling invincible.
+    The next, there was this big, silvery flash, \nand my whole world turned upside
+    down.\r\n\r\nAs I flew over the night side of the horizon, I saw them\u2014\ncolossal
+    tendrils reaching up to the sky, like something \nout of a nightmare. It sent
+    shivers down my spine, \nlet me tell you.\r\n\r\nIt was a day I'll never forget,
+    a day that marked the beginning\nof the end for life as we knew it. But here
+    we are, survivors, \nforging ahead into the unknown. It's a reminder that \nno
+    matter how dark things may seem, there's always hope\n on the horizon.\r\n\r\nThanks
+    for listening to my story, Commander. \nLet's keep pushing forward, together.\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices: []

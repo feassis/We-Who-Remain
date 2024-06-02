@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Update 1
+  m_EditorClassIdentifier: 
+  previewText: 'Progress Update 1 '
+  dialogText: "Hello Commander,\r\n\r\nI'm excited to report that I've been making
+    progress in \nexpanding my horizons here on the Remnant. Each day \nbrings new
+    opportunities for learning and growth, and I'm \neager to seize them all.\r\n\r\nBefore
+    joining this mission, I dedicated myself to the field \nof astrobiology, exploring
+    the mysteries of life beyond our \nplanet. From studying extremophiles in the
+    depths of the \nocean to analyzing microbial life on distant moons, my \nwork
+    has taken me to the far reaches of the cosmos.\r\n\r\nNow, as a member of the
+    Remnant, I feel a renewed sense \nof purpose. The chance to uncover new life
+    forms and \nresources for humanity's survival is an opportunity unlike \nany
+    other, and I'm grateful to be a part of it.\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices: []

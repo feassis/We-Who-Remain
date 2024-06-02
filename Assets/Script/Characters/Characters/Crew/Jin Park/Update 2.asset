@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Update 2
+  m_EditorClassIdentifier: 
+  previewText: ' Progress Update 2 '
+  dialogText: "Commander,\r\n\r\nAs I continue to serve in my role as Security Specialist
+    aboard \nthe Remnant, I find myself reflecting on my past combat \nexperiences
+    back on Earth. The chaos of battle, the \nadrenaline rush of confronting danger
+    head-on\u2014it's a stark\n contrast to the relative calm of our space expeditions.\r\n\r\nDuring
+    my time in the military, I faced countless challenges \nand witnessed the full
+    spectrum of human conflict. It is \nhonestly refreshing to see the entire humanity
+    working for \na common goal, leaving those meaningless conflicts behind. \nEven
+    though there are only a few of us remaining,\nand fewer awake.\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices: []

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Update 2
+  m_EditorClassIdentifier: 
+  previewText: 'Progress Update 2 '
+  dialogText: "I'm writing to inform you of my progress in strengthening \nmy resilience.
+    In the face of adversity, I've learned to adapt \nand overcome, ensuring that
+    I can fulfill my duties to the best \nof my abilities.\r\n\r\nBut I must admit,
+    can't say anything I faced back \nhome prepared me for this...\n\r\nThank you
+    for your support and encouragement.\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices: []

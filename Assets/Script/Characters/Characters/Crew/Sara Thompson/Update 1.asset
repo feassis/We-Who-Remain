@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Update 1
+  m_EditorClassIdentifier: 
+  previewText: 'Progress Update 1 '
+  dialogText: "ey Commander,\r\n\r\nJust dropping you a line to let you know that
+    I'm geared \nup and ready for our expedition. While I may not be taking \nthe
+    helm of the ship, I'm still eager to contribute to our mission \nin any way I
+    can.\r\n\r\nWith my experience in navigation and vehicle maintenance,\n I'm confident
+    that I'll be able to support the team and ensure \na successful expedition. Whether
+    it's charting our course, \nkeeping our vehicles in top condition, or lending
+    a hand \nwherever needed, you can count on me to pull my weight.\r\n\r\nThanks
+    for including me on this adventure. I'm looking forward \nto seeing what discoveries
+    await us out there!\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices: []

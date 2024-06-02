@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Update 2
+  m_EditorClassIdentifier: 
+  previewText: 'Progress Update 2 '
+  dialogText: "Hello Commander,\r\n\r\nI wanted to share with you the excitement
+    I feel as I continue \nto embrace the unknown here on the Remnant. \nThe opportunity
+    to explore the cosmos firsthand, to venture \ninto uncharted territory and discover
+    new life forms\u2014\nit's a dream come true for me.\r\n\r\nBefore joining this
+    mission, I spent years studying astrobiology \nfrom the confines of a laboratory.
+    While the research was \nfascinating, there's nothing quite like the thrill of
+    exploring \nthe cosmos in person, of witnessing the wonders of the \nuniverse
+    up close.\r\n\r\nAs we journey deeper into the unknown, I can't help but feel
+    \na sense of anticipation for what we might discover. \nWho knows what secrets
+    the cosmos holds, what new life \nforms we might encounter along the way?\r\n\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices: []

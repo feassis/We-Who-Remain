@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Update 3
+  m_EditorClassIdentifier: 
+  previewText: Progress Update 3
+  dialogText: "Hi,\r\n\r\nJust wanted to give you an update!\n\nBefore I ended up
+    on the Remnant, I was studying \nenvironmental science at university. \nI was
+    passionate about conservation and protecting our planet. \nI guess that\u2019s
+    why I feel so connected to our mission here. \nIt broke my heart when that silver
+    flash mutated even the plant \nlife into those lunatic things\u2026\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices: []

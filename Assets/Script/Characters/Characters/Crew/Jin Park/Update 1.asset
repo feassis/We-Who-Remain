@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Update 1
+  m_EditorClassIdentifier: 
+  previewText: 'Progress Update 1 '
+  dialogText: "Commander,\r\n\r\nI'm reaching out to provide an update on my progress
+    in \ngathering resources for the ship! Can\u2019t say this is my trade, \nbut
+    hey, end of the world am I right?.\r\n\r\nBefore joining this mission, my background
+    as a military \nofficer provided me with extensive training in combat and \nsecurity
+    operations. From hand-to-hand combat to tactical \nplanning, I've been trained
+    to handle a wide range of \nthreats and challenges.\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices: []
