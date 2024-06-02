@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Presenting the ship
+  m_EditorClassIdentifier: 
+  previewText: the ship
+  dialogText: "I think I\u2019m supposed to give you a rundown of the ship?\n I mean,
+    of course!\r\n\nAll the systems seem to be working as expected, although\n some
+    of the systems will need to be upgraded further to \nwork at full capacity. This
+    poor machine\u2026 \n guess that's why they woke me up. I can help you develop\ntheb
+    systems you are going to need.\r\n\r\nTo begin with, you might be able to see
+    the facilities on \nyour console screen? Each OS update changes the UI \nso you
+    might need to finagle a bit to find what you need. \nI\u2019m so sorry, I seriously
+    hate that!\r\n\r\nEach facility uses energy, so that's what our nuclear \nreactor
+    is  for! Don\u2019t worry, it can\u2019t be safer! I \ndeveloped it myself! \nWith
+    my team\u2014of course\u2014who wouldn\u2019t stop complaining \nabout missed
+    deadlines because I worry too much, and that\nmade me very anxious, and\u2014Point
+    is: It\u2019s very safe!\r\n\r\nThe greenhouse is where we can produce FOOD.
+    \nIf we plan to reach our destination in good health\n we should take good care
+    of it!\r\n\r\nOur storage is where we store things? It's pretty \nself-explanatory
+    I think? J\nust keep in mind that if we want to be safer about the \nresources,
+    we should probably invest in expanding it!\r\n\r\nThe docks are how we can dispatch
+    our crew to expeditions!\nI can make any SCRAP they might find out there useful!
+    \nEven if only one dock is operational at the moment\u2026 \nand we have no crew\u2026
+    \nSorry! I\u2019m getting ahead of myself again!\r\n\r\nFinally, cryogenics.
+    This is how we\u2019ll get more crew members! \nYou can use this system to unfreeze
+    the ship\u2019s personnel \nso they can help us in expeditions. \nJust keep in
+    mind that each person has their own traits and \nunfreezing them takes time and
+    energy. \nBut don\u2019t worry too much! \nYou have the entire remnant of humanity
+    at your disposal.\n\n Oh gosh, it\u2019s dawning on me we\u2019re the last of
+    humanity\u2026\r\n"
+  BeginDialogAction: {fileID: 0}
+  choices:
+  - {fileID: 11400000, guid: 64788f4c5ca84304bb4f5fe6203adcc3, type: 2}
