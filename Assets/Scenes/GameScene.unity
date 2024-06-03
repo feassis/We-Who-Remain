@@ -3486,7 +3486,9 @@ MonoBehaviour:
   minExpeditionScrapReward: 1
   maxExpeditionScrapReward: 6
   eventPool:
-  - {fileID: 11400000, guid: 61ef04761db8fee43b1e0412730fc07e, type: 2}
+  - {fileID: 11400000, guid: c0e0112ae867b1747a27751599aef66e, type: 2}
+  - {fileID: 11400000, guid: a419dd64c81bb074491996af35fc8352, type: 2}
+  - {fileID: 11400000, guid: c747aa9e7cc22484d9b60f62478bf740, type: 2}
   mailBox: {fileID: 297467599}
   openCloseMailButtom: {fileID: 1455103262}
   newEmailGameObject: {fileID: 891295318}
