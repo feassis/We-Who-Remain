@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af8a909bf1849d4b81d82db4f64712d, type: 3}
+  m_Name: Event 2
+  m_EditorClassIdentifier: 
+  previewText: Space anomaly
+  dialogText: "The crew detects a mysterious space anomaly \nemitting unusual energy
+    readings. Investigating it \ncould yield valuable scientific data or rare resources,
+    \nbut it\u2019s potentially dangerous.\r\n"
+  BeginDialogAction: {fileID: 11400000, guid: 3ee7681ec7ae82a4c9afb0204be5dcbc, type: 2}
+  choices:
+  - {fileID: 11400000, guid: 6edc7f945b2c8d848b0c7fe111017baa, type: 2}
+  - {fileID: 11400000, guid: 7f0558c8dcdb6b54f827faaa49348d16, type: 2}
+  - {fileID: 11400000, guid: 980167b487c8de9418ded9abd782c551, type: 2}
