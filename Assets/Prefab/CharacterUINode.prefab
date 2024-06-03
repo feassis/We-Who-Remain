@@ -1913,6 +1913,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5644327881420603268, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6617910492292231798, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
       propertyPath: m_Name
       value: ExpeditionMuttom
@@ -1920,7 +1924,35 @@ PrefabInstance:
     - target: {fileID: 7980118202341687021, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 21300000, guid: 4232f4b3e63833141b5c11c7306179e8, type: 3}
+    - target: {fileID: 8480522267293530474, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8480522267293530474, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 84.9266
+      objectReference: {fileID: 0}
+    - target: {fileID: 8480522267293530474, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.9854
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022684575837058541, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 59.1786
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022684575837058541, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 62.8615
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022684575837058541, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.4511
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022684575837058541, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.5686
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1948,7 +1980,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 3154189736711797629}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -2041,6 +2073,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5644327881420603268, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6617910492292231798, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
       propertyPath: m_Name
       value: HealButtom
@@ -2048,7 +2084,23 @@ PrefabInstance:
     - target: {fileID: 7980118202341687021, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 21300000, guid: 0d8c285024b328a4faa22cb3b43383c6, type: 3}
+    - target: {fileID: 8480522267293530474, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8480522267293530474, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022684575837058541, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 61.7195
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022684575837058541, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.6623
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2060,7 +2112,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 6320632247302847934}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -2169,9 +2221,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5644327881420603268, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6617910492292231798, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
       propertyPath: m_Name
       value: GiftButtom
+      objectReference: {fileID: 0}
+    - target: {fileID: 7980118202341687021, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 89bae286e02ab5b4d8318c47a807f77a, type: 3}
+    - target: {fileID: 8480522267293530474, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8480522267293530474, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 88.0975
+      objectReference: {fileID: 0}
+    - target: {fileID: 8480522267293530474, guid: 0b26ff82f6eb492498b25d19cf3eb725, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.1316
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2184,7 +2256,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 8424825680878214114}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 

@@ -1428,15 +1428,15 @@ RectTransform:
   m_GameObject: {fileID: 297467595}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 855591497}
   m_Father: {fileID: 734337367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 75, y: -55}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -885, y: 485}
   m_SizeDelta: {x: 1241.3945, y: 512.23}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &297467597
@@ -1524,8 +1524,8 @@ RectTransform:
   m_GameObject: {fileID: 297492639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 270803557}
   - {fileID: 520371328}
@@ -1534,9 +1534,9 @@ RectTransform:
   - {fileID: 925329613}
   m_Father: {fileID: 734337367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 43.704834, y: 3.2374}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 919.1, y: 3.2374}
   m_SizeDelta: {x: 696.5801, y: 1320.4954}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &297492641
@@ -1612,7 +1612,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.2999878, y: -154}
+  m_AnchoredPosition: {x: 3.3000488, y: -154}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &307262234
@@ -3481,6 +3481,7 @@ MonoBehaviour:
   giftFoodCost: 3
   damageForLackOFood: 1
   damageForLackOfEnergy: 1
+  passiveDamage: 1
   expeditionFailChance: 0.25
   minExpeditionScrapReward: 1
   maxExpeditionScrapReward: 6
@@ -5387,8 +5388,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.3, y: 4.2}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchoredPosition: {x: 0.1, y: 7.3}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976061127
 MonoBehaviour:
@@ -5410,7 +5411,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: cb284c7e2505eab47b598520180fc077, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6051,8 +6052,8 @@ RectTransform:
   m_GameObject: {fileID: 1233619564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7912515616061842515}
   - {fileID: 77462012}
@@ -6060,9 +6061,9 @@ RectTransform:
   - {fileID: 1977176677}
   m_Father: {fileID: 734337367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -54.630127, y: 65.53003}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -902.4, y: 543.9}
   m_SizeDelta: {x: 1492.4089, y: 797.7535}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1233619566
@@ -6405,7 +6406,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 43084ebaade7ea54d8b1b9db122a435a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6718,7 +6719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01635bbaf40403a4c80a6c10aadcaa12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLife: 5
+  baseLife: 10
   lifeIncPerlevel: 1
   repairBaseCost: 5
   repairIncPerLevel: 0
@@ -6733,10 +6734,12 @@ MonoBehaviour:
   numberOfDefrosts: 1
   numberOfDefrostsIncEachTwoLevels: 1
   characterConfigs:
-  - {fileID: 11400000, guid: df1e57fcff5581748a878217f5c109d8, type: 2}
-  - {fileID: 11400000, guid: 8ecc372c7eeab8344b4c0e13fac2ce4d, type: 2}
-  - {fileID: 11400000, guid: f6317ed32d6c1be48978c95312bb93c0, type: 2}
-  - {fileID: 11400000, guid: 6fc576107210db341b6a3299d251424a, type: 2}
+  - {fileID: 11400000, guid: 90da3644f5ab3e247b17aff90b976b75, type: 2}
+  - {fileID: 11400000, guid: a01b836de9bd0d1498dbbbaf4224a6e6, type: 2}
+  - {fileID: 11400000, guid: 47f41628cce010845b919bec48c8b118, type: 2}
+  - {fileID: 11400000, guid: 4e9adcce2019b7c49a25efbd8870ea9e, type: 2}
+  - {fileID: 11400000, guid: 099a73fc8d6c1f040a513b36db9fa653, type: 2}
+  - {fileID: 11400000, guid: b3ceb2bd99db15547a19852d7ce5f1d5, type: 2}
 --- !u!114 &1451525251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6749,7 +6752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f591fdbfda32bb5408cca64c10faa1c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLife: 5
+  baseLife: 15
   lifeIncPerlevel: 1
   repairBaseCost: 5
   repairIncPerLevel: 0
@@ -6780,7 +6783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a59a059cc5372c4fae0be98ae5ab35f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLife: 5
+  baseLife: 8
   lifeIncPerlevel: 1
   repairBaseCost: 5
   repairIncPerLevel: 0
@@ -6804,7 +6807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50324cf78845994ca810fce0747972e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLife: 5
+  baseLife: 25
   lifeIncPerlevel: 1
   repairBaseCost: 5
   repairIncPerLevel: 0
@@ -6828,7 +6831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15f8686a61c632459a286cd3b667077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLife: 5
+  baseLife: 6
   lifeIncPerlevel: 1
   repairBaseCost: 5
   repairIncPerLevel: 0
@@ -7132,8 +7135,8 @@ RectTransform:
   m_GameObject: {fileID: 1477934803}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1799176148}
   - {fileID: 307262233}
@@ -7142,10 +7145,10 @@ RectTransform:
   - {fileID: 1006473215}
   m_Father: {fileID: 734337367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -137.58911, y: 0}
-  m_SizeDelta: {x: 1575.4, y: 512.767}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -975.5, y: -489.2}
+  m_SizeDelta: {x: 1575.3999, y: 512.7671}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1477934805
 MonoBehaviour:
@@ -9241,7 +9244,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9be7e34d3fa30ea488bd878a5424028d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10073,7 +10076,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -204.5, y: 310.87317}
+  m_AnchoredPosition: {x: -204.5, y: 310.8726}
   m_SizeDelta: {x: 653.81885, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1989807761

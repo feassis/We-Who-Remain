@@ -1,11 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using TMPro;
-using UnityEditor.MPE;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -29,6 +25,7 @@ public class GameMaster : MonoBehaviour
     [SerializeField] private int giftFoodCost = 3;
     [SerializeField] private int damageForLackOFood = 1;
     [SerializeField] private int damageForLackOfEnergy = 1;
+    [SerializeField] private int passiveDamage = 1;
 
 
     [Header("Expeditions And Events")]
@@ -207,9 +204,9 @@ public class GameMaster : MonoBehaviour
         }
     }
 
-    private void EndGame(EndGameMode lost)
+    private void EndGame(EndGameMode mode)
     {
-        //ToDo Open End Game Scene
+        EndGameScene.OpenEndGameScene(mode);
     }
 
     private void SetupChoiceButtons()
@@ -799,7 +796,13 @@ public class GameMaster : MonoBehaviour
 
     private void ProcessEnergy()
     {
-        if(GetTotalEnergyDemand() > reactor.GetGeneratedEnergy())
+        cryogenics.Damage(passiveDamage);
+        dock.Damage(passiveDamage);
+        warehouse.Damage(passiveDamage);
+        reactor.Damage(passiveDamage);
+        greenhouse.Damage(passiveDamage);
+
+        if (GetTotalEnergyDemand() > reactor.GetGeneratedEnergy())
         {
             cryogenics.Damage(damageForLackOfEnergy);
             dock.Damage(damageForLackOfEnergy);
