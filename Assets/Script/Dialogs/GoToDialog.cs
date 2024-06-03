@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu (fileName = "New Go To Dialog", menuName = "Configs/Dialog Action/GoToDialog")]
-public abstract class GoToDialog : DialogAction
+public class GoToDialog : DialogAction
 {
     [SerializeField] private DialogConfig desiredDialog;
     public override string ExecuteAction()
